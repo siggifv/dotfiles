@@ -1,0 +1,15 @@
+Config { font = "xft:inconsolata:pixelsize=10"
+       , commands = [ Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red"] 10 
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Com "volume" [] "myVolume" 10
+                    , Run Weather "BIRK" ["-t","<station>: <tempC>° C","-L","1","-H","10","--normal","green","--high","red","--low","lightblue"] 36000 
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %Y %H:%M" "date" 10
+                    , Run StdinReader
+                    , Run Com "dropbox" ["status"] "" 10 
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %multicpu% | %memory% * %swap% | Dropbox: %dropbox% | Vol: %myVolume% | %BIRK%  | <fc=#ee9a00>%date%</fc>"
+       }
+
