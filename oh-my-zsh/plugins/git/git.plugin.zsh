@@ -54,9 +54,7 @@ alias gm='git merge'
 compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
-<<<<<<< HEAD
 alias glp='git log --pretty="%C(yellow)%h%Creset: %s %C(blue)(%an)%Creset"'
-=======
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gf='git ls-files | grep'
 alias gpoat='git push origin --all && git push origin --tags'
@@ -64,7 +62,6 @@ alias gpoat='git push origin --all && git push origin --tags'
 # Will cd into the top of the current repository
 # or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
->>>>>>> 397c085a19a22f6be515665835d09a2505cb3f23
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
