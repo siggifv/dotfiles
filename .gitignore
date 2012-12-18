@@ -2,4 +2,8 @@ vim/undodir
 vim/sessions
 oh-my-zsh/cache
 oh-my-zsh/log
-
+xmonad/*.hi
+xmonad/*.o
+xmonad/xmonad-x86_64-linux
+xmonad/xmonad.errors
+*.swp
