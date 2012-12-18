@@ -69,6 +69,7 @@ myKeys = [ ("M-f", sendMessage $ Toggle FULL)
          , ("<XF86AudioLowerVolume>", spawn "amixer -q set Master 4%- unmute")
          , ("<XF86AudioRaiseVolume>", spawn "amixer -q set Master 4%+ unmute")
          ] 
+startup = spawn "feh --bg-fill ~/Pictures/wallpaper.jpeg"
 
 main = do
     xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
@@ -76,6 +77,7 @@ main = do
          { modMask = mod4Mask
          , terminal = "gnome-terminal"
          , manageHook = myManageHook
+         , startupHook = startup
          , layoutHook = myLayout
          , logHook = takeTopFocus >> dynamicLogWithPP xmobarPP
              { ppOutput = hPutStrLn xmproc
