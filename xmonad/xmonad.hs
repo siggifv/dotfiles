@@ -57,6 +57,7 @@ myManageHook = composeAll . concat $
       , className =? "Banshee" --> doShift "9"
       , className =? "Tomboy" --> doShift "8"
       , className =? "Gimp" --> doFloat
+      , className =? "Hipchat" --> doFloat
       ]
     ]
     where myBrowsers = ["Opera", "Google-chrome", "chromium-browser", "chromium-dev"] 
