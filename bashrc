@@ -111,3 +111,7 @@ PATH="~/Dropbox/GV/RDT:$PATH"
 
 # For GHC and cabal
 PATH="~/.cabal/bin:$PATH"
+
+# Export Java environment variables
+export JAVA_HOME=/path/your/jdk 
+export PATH=$JAVA_HOME/bin:$PATH
